@@ -7,6 +7,7 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "flow-bin": "^0.93.0",
     "jsonwebtoken": "^8.5.0",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.15",
@@ -23,6 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "flow": "flow",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
