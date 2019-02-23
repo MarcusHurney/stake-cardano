@@ -1,0 +1,8 @@
+@import '../../assets/scss/mixins';
+
+.block {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  @include traverseAnimation();
+}

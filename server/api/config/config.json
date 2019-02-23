@@ -1,0 +1,22 @@
+{
+  "test": {
+    "PORT": "",
+    "MONGO_AUTH_TESTER": "",
+    "MONGODB_URI": "",
+    "JWT_SECRET": "",
+    "SEND_USER": "",
+    "SEND_PASS": "",
+    "MAILGUN_USERNAME": "",
+    "MAILGUN_PASSWORD": ""
+  },
+  "development": {
+    "PORT": "",
+    "MONGO_AUTH_TESTER": "",
+    "MONGODB_URI": "",
+    "JWT_SECRET": "",
+    "SEND_USER": "",
+    "SEND_PASS": "",
+    "MAILGUN_USERNAME": "",
+    "MAILGUN_PASSWORD": ""
+  }
+}

@@ -1,0 +1,12 @@
+@keyframes upDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}
+
+@mixin upDownAnimation {
+  animation: upDown 4s ease-in-out infinite alternate;
+}
