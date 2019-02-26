@@ -1,0 +1,99 @@
+$block-map: (
+  top-left: (
+    startX: 0px,
+    endX: 460px, 
+    speedX: 8s,
+    startY: 0px,
+    endY: 460px, 
+    speedY: 10s,
+    speedSpin: 4s
+  ),
+  top-middle: (
+    startX: 230px,
+    endX: 460px, 
+    speedX: 6s,
+    startY: 0px,
+    endY: 460px, 
+    speedY: 9s,
+    speedSpin: 8s
+  ),
+  top-right: (
+    startX: 460px,
+    endX: 0px, 
+    speedX: 10s,
+    startY: 0px,
+    endY: 460px, 
+    speedY: 8s,
+    speedSpin: 7s
+  ),
+  right-middle: (
+    startX: 460px,
+    endX: 0px, 
+    speedX: 7s,
+    startY: 230px,
+    endY: 460px, 
+    speedY: 10s,
+    speedSpin: 9s
+  ),
+  bottom-right: (
+    startX: 460px,
+    endX: 0px, 
+    speedX: 9s,
+    startY: 460px,
+    endY: 0px, 
+    speedY: 11s,
+    speedSpin: 2s
+  ),
+  bottom-middle: (
+    startX: 230px,
+    endX: 0px, 
+    speedX: 5s,
+    startY: 460px,
+    endY: 0px, 
+    speedY: 7s,
+    speedSpin: 5s
+  ),
+  bottom-left: (
+    startX: 0px,
+    endX: 460px, 
+    speedX: 9s,
+    startY: 460px,
+    endY: 0px, 
+    speedY: 7s,
+    speedSpin: 3s
+  ),
+  left-middle: (
+    startX: 0px,
+    endX: 460px, 
+    speedX: 10s,
+    startY: 230px,
+    endY: 0px, 
+    speedY: 13s,
+    speedSpin: 10s
+  )
+);
+
+
+@mixin floatAnimation() {
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @each $block, $property-map in $block-map {
+    @keyframes moveX-#{$block} {
+      from { left: map-get($property-map, startX); } to { left: map-get($property-map, endX); }
+    }
+
+    @keyframes moveY-#{$block} {
+      from { top: map-get($property-map, startY); } to { top: map-get($property-map, endY); }
+    }
+
+    .float-#{$block} {
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      animation: moveX-#{$block} map-get($property-map, speedX) ease-in-out infinite alternate, moveY-#{$block} map-get($property-map, speedY) ease-in-out infinite alternate, spin map-get($property-map, speedSpin) linear infinite;
+    }
+  }
+}

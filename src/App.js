@@ -7,9 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className={styles['app']}>
-        <Space />
         <div className={styles['app__content']}>
-          <Banner />
+          <Space>
+            <Banner />
+          </Space>
         </div>
       </div>
     );
