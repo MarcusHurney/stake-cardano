@@ -8,5 +8,5 @@ type Props = {
 };
 
 export const Block = ({ name }: Props) => (
-  <img src={block} className={styles[`float-${name}`]} alt="block" />
+  <img src={block} className={styles[`float-${name}`]} alt="floating block" />
 );
