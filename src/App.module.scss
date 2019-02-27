@@ -1,6 +1,7 @@
 .app {
   background-color: #282c34;
   height: 100vh;
+  // height: 300vh;
 
   &__content {
     display: flex;
@@ -9,23 +10,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    height: 100vh;
-  }
-}
-
-// .banner {
-//   height: 40vmin;
-// }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    min-height: 100vh;
+    max-height: var(--window-inner-height);
   }
 }
