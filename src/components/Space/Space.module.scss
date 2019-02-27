@@ -1,7 +1,7 @@
 .space {
   position: relative;
-  height: 500px;
-  width: 500px;
+  height: var(--space-height);
+  width: var(--space-width);
   display: flex;
   flex-direction: column;
   justify-content: center;

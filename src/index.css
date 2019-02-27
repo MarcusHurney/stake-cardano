@@ -12,3 +12,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: 'Altero-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Altero-Regular'), url('./assets/fonts/Altero-Regular.otf') format('truetype');
+}

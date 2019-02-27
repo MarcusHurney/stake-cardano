@@ -8,8 +8,13 @@
   100% { transform: rotate(0deg); }
 }
 
+@keyframes lunarFade {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
 @mixin spinAnimation {
-  animation: spin 60s linear infinite;
+  animation: spin 60s linear infinite, lunarFade 60s ease-in-out alternate infinite;
 }
 
 @mixin spinLeftAnimation {
