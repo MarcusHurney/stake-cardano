@@ -1,18 +1,16 @@
 // @flow
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import type { Node } from 'react';
 import { debounce, map } from 'lodash';
 import { Block } from './Block';
 import { BREAKPOINTS } from '../../utils/constants';
 import styles from './Space.module.scss';
 
-type WindowProps = {
-  innerHeight: number,
-  innerWidth: number,
-};
-
-const updateCSSVariables = ({ innerHeight, innerWidth }: WindowProps) => {
+const updateCSSVariables = () => {
+  const { innerHeight, innerWidth } = window;
   const { SMALL, MEDIUM } = BREAKPOINTS;
-  let cssVariables = {
+
+  let cssVariables: Object = {
     '--window-inner-height': innerHeight,
     '--window-inner-width': innerWidth,
   };
@@ -47,26 +45,20 @@ const updateCSSVariables = ({ innerHeight, innerWidth }: WindowProps) => {
   }
 
   map(cssVariables, (value, prop) => {
-    document.documentElement.style.setProperty(prop, `${value}px`);
+    if (document.documentElement && document.documentElement.style) {
+      document.documentElement.style.setProperty(prop, `${value}px`);
+    }
   });
 };
 
-export const Space = (props) => {
-  const { innerHeight, innerWidth } = window;
-  updateCSSVariables({ innerHeight, innerWidth });
-  const [windowDimensions, setDimensions] = useState({ innerHeight, innerWidth });
+export const Space = ({ children }: { children: Node }) => {
+  updateCSSVariables();
 
-  const handleResize = () => {
-    updateCSSVariables({ innerHeight, innerWidth });
-    setDimensions({ innerHeight, innerWidth });
-  };
-
-  const debouncedResize = debounce(handleResize, 300);
-
+  const listenerParams = ['resize', debounce(updateCSSVariables, 300)];
   useEffect(() => {
-    window.addEventListener('resize', debouncedResize);
-    return () => window.removeEventListener('resize', debouncedResize);
-  }, [windowDimensions]);
+    window.addEventListener(...listenerParams);
+    return () => window.removeEventListener(...listenerParams);
+  });
 
   return (
     <div className={styles['space']}>
@@ -78,7 +70,7 @@ export const Space = (props) => {
       <Block name="bottom-middle" />
       <Block name="bottom-left" />
       <Block name="left-middle" />
-      {props.children}
+      {children}
     </div>
   );
 }

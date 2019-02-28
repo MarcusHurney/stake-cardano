@@ -1,9 +1,24 @@
-nav {
+@keyframes slick {
+  from {
+    width: 0;
+    .navbar_logo_container {
+      width: 0;
+    }
+  }
+  to {
+    width: 100vw;
+    .navbar_logo_container {
+      width: 15vw;
+    }
+  }
+}
+
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 3rem;
+  padding-left: 5rem;
   padding-right: 3rem;
   z-index: 5;
   position: fixed !important;
@@ -14,13 +29,17 @@ nav {
     0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  height: 60px;
+  height: 45px;
   width: 100vw;
   border-bottom: 2px solid #979fef;
-  visibility: var(--navbar-visibility);
+  animation: slick 0.5s;
 
-  .navbar-brand {
-    flex: 1;
-    border: 1px solid red;
+  .navbar_logo_container {
+    .navbar_logo {
+      font-size: 0.9em;
+      width: 30px;
+      margin-bottom: 0.5em;
+      border: none;
+    }
   }
 }
