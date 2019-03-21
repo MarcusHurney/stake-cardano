@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Logo } from '../Logo/Logo';
 import { throttle } from 'lodash';
 import styles from './Navbar.module.scss';
+import logoStyles from './NavbarLogo.module.scss';
 
 export const Navbar = () => {
    const [navbarIsVisible, handleScroll] = useState(false);
@@ -23,7 +24,7 @@ export const Navbar = () => {
   return (
     <nav className={styles['navbar']} role="navigation" aria-label="navigation bar">
       <div className={styles['navbar_logo_container']}>
-        <Logo className={styles['navbar_logo']} />
+        <Logo styles={logoStyles} />
       </div>
     </nav>
   );
