@@ -14,36 +14,41 @@ import SimpleGrid from './components/Layout/Grid.module.scss';
 class App extends Component {
   render() {
     const templateAreas = [
-      'banner header header mission',
-      'banner header header mission',
-      'banner team team team',
-      'hardware team team team'
+      '. logo logo logo logo',
+      '. banner banner mission .',
+      '. banner banner mission .',
+      '. banner banner mission .'
     ];
 
     return (
       <div className={appStyles['app']}>
         <Navbar />
-        <Gutter padding="10vh 10vw">
+        <Gutter padding="5vh 10vw 0 10vw">
           <Grid
           theme={SimpleGrid}
-          template="repeat(4, 1fr) / repeat(4, 1fr)"
+          autoRows
+          columns={'repeat(5, 1fr)'}
           templateAreas={templateAreas}
           themeOverrides={customGrid}
-          gap={20}
+          gap={30}
           >
-            <GridItem className={customGrid.banner} gridArea="banner">
-              <div className={appStyles['deep_space_wrapper']}>
-                <div className={appStyles['deep_space_visuals']}>
+            <GridItem
+              className={customGrid['logo']}
+              gridArea="logo"
+              alignSelf="flex-end"
+            >
+              <div className={appStyles['logo_wrapper_outer']}>
+                <div className={appStyles['logo_wrapper_inner']}>
                   <Logo styles={logoStyles} />
-                    <Space>
-                      <Banner />
-                  </Space>
                 </div>
               </div>
             </GridItem>
 
-            <GridItem className={customGrid['header']} gridArea="header">
-              <div className={customGrid['header_content']}>
+            <GridItem className={customGrid['banner']} gridArea="banner">
+              <Space className={customGrid['banner_moon']}>
+                <Banner />
+              </Space>
+              <div className={customGrid['banner_content']}>
                 <h1>Let's</h1>
                 <h1>Decentralize</h1>
                 <h1>Cardano</h1>
@@ -53,18 +58,25 @@ class App extends Component {
               <span></span>
             </GridItem>
 
-            
-
-            <GridItem gridArea="team">
-              <h1>team</h1>
-            </GridItem>
-          
-            <GridItem gridArea="mission">
-              <p>mission</p>
-            </GridItem>
-
-            <GridItem gridArea="hardware">
-              <p>hardware</p>
+            <GridItem className={customGrid['mission']} gridArea="mission">
+              <div className={customGrid['mission_title']}>
+                <h1>Objectives</h1>
+              </div>
+              <div className={customGrid['mission_obj1']}>
+                <h1>Fo</h1><h1>rtify</h1><p> the Cardano network</p>
+                <p> by providing quality staking pools with constant uptime.</p>
+              </div>
+              <div className={customGrid['mission_obj2']}>
+                <h1>Cr</h1><h1>eate</h1><p> passive income for</p>
+                <p> our delegates through trusted nodes.</p>
+              </div>
+              <div className={customGrid['mission_obj3']}>
+                <h1>Gr</h1><h1>ow</h1><p> the ecosystem</p>
+                <p> by bringing new participants into the Cardano network.</p>
+              </div>
+              <span></span>
+              <span></span>
+              <span></span>
             </GridItem>
           </Grid>
         </Gutter>

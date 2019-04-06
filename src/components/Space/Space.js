@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import type { Node } from 'react';
 import { debounce, map } from 'lodash';
+import cx from 'classnames';
 import { Block } from './Block';
 import { BREAKPOINTS } from '../../utils/constants';
 import styles from './Space.module.scss';
@@ -51,7 +52,7 @@ const updateCSSVariables = () => {
   });
 };
 
-export const Space = ({ children }: { children: Node }) => {
+export const Space = ({ children, className }: { children: Node, className: string }) => {
   updateCSSVariables();
 
   const listenerParams = ['resize', debounce(updateCSSVariables, 300)];
@@ -59,9 +60,9 @@ export const Space = ({ children }: { children: Node }) => {
     window.addEventListener(...listenerParams);
     return () => window.removeEventListener(...listenerParams);
   });
-
+  const classes = cx(styles['space'], className);
   return (
-    <div className={styles['space']}>
+    <div className={classes}>
       <Block name="top-left" />
       <Block name="top-middle" />
       <Block name="top-right" />
