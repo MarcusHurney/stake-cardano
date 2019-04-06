@@ -1,9 +1,101 @@
-.item {
- font-family: 'apercu-pro', sans-serif;
- color: #fff;
- border-radius: 5px;
- border: 1px solid rgba(66, 244, 226, 0.6);
- box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
- padding: 20px;
- font-size: 150%;
+@import './assets/scss/variables';
+
+.container {
+ @media (max-width: 600px) {
+  display: block !important;
+  .header {
+   &_content {
+    h1 {
+     font-size: 20px;
+    }
+   }
+   span {
+    &:nth-of-type(1) {
+     height: 10px !important;
+     width: 10px !important;
+    }
+    &:nth-of-type(2) {
+     height: 10px !important;
+     width: 10px !important;
+    }
+    &:nth-of-type(3) {
+     height: 10px !important;
+     width: 10px !important;
+    }
+   }
+  }
+ }
+
+ .item {
+  font-family: 'apercu-pro', sans-serif;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid $color-primary;
+  padding: 20px;
+  font-size: 150%;
+
+  &:hover {
+   border: 1px solid #fff;
+  }
+ }
+
+ .banner {
+  border: none !important;
+  box-shadow: none !important;
+ }
+
+ .header {
+  // border: none;
+  // box-shadow: none;
+  position: relative;
+  border: 1px solid #fff;
+  box-shadow: 3px 3px 20px $color-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  &_content {
+   h1 {
+    margin: 0;
+   }
+  }
+  span {
+   &:nth-of-type(1) {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+   }
+   &:nth-of-type(2) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+   }
+   // &:nth-of-type(3) {
+   //  position: absolute;
+   //  bottom: 10px;
+   //  left: 10px;
+   //  height: 20px;
+   //  width: 20px;
+   //  border-bottom: 1px solid white;
+   //  border-left: 1px solid white;
+   // }
+   &:nth-of-type(3) {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+   }
+  }
+ }
 }

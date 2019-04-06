@@ -3,13 +3,11 @@
   height: 300vh;
 
   .deep_space_wrapper {
-    // border: 1px solid yellow;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     width: auto;
-    min-height: var(--window-inner-height);
     font-size: calc(10px + 2vmin);
 
     @media screen and (max-width: 685px) {
@@ -19,9 +17,6 @@
     }
 
     .deep_space_visuals {
-      // border: 1px solid green;
-      padding-top: 2em;
-      padding-left: 2em;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -36,7 +31,6 @@
   
     .deep_space_content {
       height: 100%;
-      // border: 1px solid orange;
       display: flex;
       flex-direction: column;
       align-items: center;

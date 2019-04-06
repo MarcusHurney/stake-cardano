@@ -14,10 +14,10 @@ import SimpleGrid from './components/Layout/Grid.module.scss';
 class App extends Component {
   render() {
     const templateAreas = [
-      'sidebar header header header',
-      'sidebar content content aside',
-      'sidebar content content aside',
-      'footer footer footer footer'
+      'banner header header mission',
+      'banner header header mission',
+      'banner team team team',
+      'hardware team team team'
     ];
 
     return (
@@ -26,16 +26,12 @@ class App extends Component {
         <Gutter padding="10vh 10vw">
           <Grid
           theme={SimpleGrid}
-          themeOverrides={customGrid}
           template="repeat(4, 1fr) / repeat(4, 1fr)"
           templateAreas={templateAreas}
-          gap={10}
+          themeOverrides={customGrid}
+          gap={20}
           >
-            <GridItem gridArea="content">
-              <h1>Let's Decentralize Cardano</h1>
-            </GridItem>
-
-            <GridItem gridArea="sidebar">
+            <GridItem className={customGrid.banner} gridArea="banner">
               <div className={appStyles['deep_space_wrapper']}>
                 <div className={appStyles['deep_space_visuals']}>
                   <Logo styles={logoStyles} />
@@ -46,16 +42,29 @@ class App extends Component {
               </div>
             </GridItem>
 
-            <GridItem gridArea="header">
-              <p>Let's Decentralize Cardano</p>
+            <GridItem className={customGrid['header']} gridArea="header">
+              <div className={customGrid['header_content']}>
+                <h1>Let's</h1>
+                <h1>Decentralize</h1>
+                <h1>Cardano</h1>
+              </div>
+              <span></span>
+              <span></span>
+              <span></span>
             </GridItem>
 
-            <GridItem gridArea="footer">
-              <h1>Let's Decentralize Cardano</h1>
+            
+
+            <GridItem gridArea="team">
+              <h1>team</h1>
+            </GridItem>
+          
+            <GridItem gridArea="mission">
+              <p>mission</p>
             </GridItem>
 
-            <GridItem gridArea="aside">
-              <p>Let's Decentralize Cardano</p>
+            <GridItem gridArea="hardware">
+              <p>hardware</p>
             </GridItem>
           </Grid>
         </Gutter>
