@@ -30,7 +30,7 @@ class App extends Component {
           columns={'repeat(5, 1fr)'}
           templateAreas={templateAreas}
           themeOverrides={customGrid}
-          gap={30}
+          gap={45}
           >
             <GridItem
               className={customGrid['logo']}
