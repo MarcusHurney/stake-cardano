@@ -1,3 +1,5 @@
+@import './assets/scss/variables';
+
 .app {
   background-color: #282c34;
   height: 300vh;
@@ -54,6 +56,41 @@
         align-items: center;
         padding-top: 0;
         padding-left: 0;
+      }
+    }
+  }
+
+  .email_collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+
+    &_wrapper {
+      height: 70vh;
+      min-width: 50vh;
+      margin-top: 150px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      box-shadow: 3px 3px 20px #979fef;
+      padding: 1em;
+
+      h1 {
+        display: inline;
+        font-family: 'apercu-pro', sans-serif;
+        font-size: 1.3em;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+
+        &:nth-of-type(2) {
+          color: $color-primary;
+          font-family: 'Altero-Regular';
+          border-bottom: 1px solid #fff !important;
+          border-right: 1px solid #fff !important;
+          padding: 0 5px 5px 5px;
+        }
       }
     }
   }

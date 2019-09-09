@@ -79,6 +79,11 @@ class App extends Component {
               <span></span>
             </GridItem>
           </Grid>
+          <div className={appStyles['email_collection']}>
+            <div className={appStyles['email_collection_wrapper']}>
+              <h1>Stay</h1><h1>Notified</h1>
+            </div>
+          </div>
         </Gutter>
       </div>
     );
