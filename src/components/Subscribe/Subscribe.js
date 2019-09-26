@@ -39,11 +39,11 @@ export default class Subscribe extends Component<{}, State> {
  render() {
   return (
    <form className={styles.component} onSubmit={this.onSubmit}>
-     <label className={styles.nameLabel}>
+     <label className={styles.label}>
        Name:
        <input type="text" value={this.state.name} onChange={this.onNameChange} />
      </label>
-     <label className={styles.emailLabel}>
+     <label className={styles.label}>
        Email:
        <input type="email" value={this.state.email} onChange={this.onEmailChange} />
      </label>
