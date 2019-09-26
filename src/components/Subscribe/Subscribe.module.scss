@@ -20,14 +20,21 @@
   color: #fff;
   font-size: 1em;
   height: 1.75em;
-  margin-left: 0.5em;
+  margin-left: 0.7em;
   padding-left: 5px;
+  width: 295px;
 
   &:focus {
    transition: ease-in-out 0.3s linear;
    border: 1px solid #979fef;
    border-radius: 5px;
    outline: none;
+  }
+ }
+
+ @media screen and (max-width: 685px) {
+  input {
+   width: 205px;
   }
  }
 }
@@ -44,14 +51,21 @@
   color: #fff;
   font-size: 1em;
   height: 1.75em;
-  margin-left: 0.5em;
+  margin-left: 0.7em;
   padding-left: 5px;
+  width: 205px;
 
   &:focus {
    transition: ease-in-out 0.3s linear;
    border: 1px solid #979fef;
    border-radius: 5px;
    outline: none;
+  }
+ }
+
+ @media screen and (max-width: 685px) {
+  input {
+   width: 205px;
   }
  }
 }
