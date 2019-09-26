@@ -6,6 +6,7 @@ import { Banner } from './components/Banner/Banner';
 import { Logo } from './components/Logo/Logo';
 import { Navbar } from './components/Navbar/Navbar';
 import { Space } from './components/Space/Space';
+import Subscribe from './components/Subscribe/Subscribe';
 import appStyles from './App.module.scss';
 import logoStyles from './components/Logo/Logo.module.scss';
 import customGrid from './customGrid.module.scss';
@@ -82,6 +83,7 @@ class App extends Component {
           <div className={appStyles['email_collection']}>
             <div className={appStyles['email_collection_wrapper']}>
               <h1>Stay</h1><h1>Notified</h1>
+              <Subscribe />
             </div>
           </div>
         </Gutter>

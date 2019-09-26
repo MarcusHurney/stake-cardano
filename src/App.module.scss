@@ -65,12 +65,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
 
     &_wrapper {
-      height: 70vh;
+      height: auto;
       min-width: 50vh;
-      margin-top: 150px;
+      margin-top: 48px;
       border: 1px solid #fff;
       border-radius: 5px;
       box-shadow: 3px 3px 20px #979fef;
