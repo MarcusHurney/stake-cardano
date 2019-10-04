@@ -1,0 +1,17 @@
+@import '../../assets/scss/mixins';
+
+.root {
+ margin: auto;
+ pointer-events: none;
+ @include loading-spinner(#fff, 1.5s);
+}
+
+.big {
+ height: 40px;
+ width: 40px;
+}
+
+.small {
+ height: 20px;
+ width: 20px;
+}

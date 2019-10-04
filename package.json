@@ -20,6 +20,7 @@
     "normalize-scss": "^7.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-mailchimp-subscribe": "^2.1.0",
     "react-scripts": "2.1.5",
     "validator": "^10.11.0"
   },
