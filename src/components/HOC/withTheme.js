@@ -27,6 +27,7 @@ export function withTheme<C: ComponentType<any>>(Component: C): C {
     </ThemeContext.Consumer>
   ));
   // create a new displayName for the wrapped component
+  // $FlowFixMe
   WrappedComponent.displayName = `withTheme(${getDisplayName(Component)})`;
   // Cast type to our desired custom component
   return ((WrappedComponent: any): C);

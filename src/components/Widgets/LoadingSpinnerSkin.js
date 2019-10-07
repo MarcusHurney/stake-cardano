@@ -14,7 +14,6 @@ type Props = {
 
 export const LoadingSpinnerSkin = (props: Props) => {
   const { big, className, themeId, visible } = props;
-  console.log(props.themeId);
   const theme = props.theme[themeId];
   const size = big ? theme.big : theme.small;
 

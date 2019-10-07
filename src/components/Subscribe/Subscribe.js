@@ -8,10 +8,12 @@ import { MAILCHIMP_ACTION } from './constants';
 import spinnerStyles from '../Widgets/LoadingSpinner.module.scss'; 
 import styles from './Subscribe.module.scss';
 import success from '../../assets/svg/success.svg';
+import refresh from '../../assets/svg/refresh.svg';
 
 type State = {
   NAME: string,
   EMAIL: string,
+  refreshed: boolean,
 };
 
 export default class Subscribe extends Component<{}, State> {
@@ -19,7 +21,8 @@ export default class Subscribe extends Component<{}, State> {
     super(props);
     this.state = {
       NAME: '',
-      EMAIL: ''
+      EMAIL: '',
+      refreshed: false,
     };
   }
 
@@ -34,20 +37,22 @@ export default class Subscribe extends Component<{}, State> {
       NAME: event.target.value
     });
   }
-  
 
   onSubmit = (subscribe: Function) => {
     subscribe(this.state);
     this.setState({
      NAME: '',
-     EMAIL: ''
+     EMAIL: '',
+     refreshed: false,
     });
   }
+
+  refreshSubmitBtn = () => this.setState({ NAME: '', EMAIL: '', refreshed: true });
 
   renderSubscribeBtn = (
     { status, onSubscribe }: { status: string, onSubscribe: Function }
   ) => {
-    if (!status) {
+    if (!status || this.state.refreshed) {
       return (
         <button className={styles.subscribeBtn} onClick={onSubscribe}>
           Subscribe
@@ -55,7 +60,7 @@ export default class Subscribe extends Component<{}, State> {
       );
     } else if (status === 'sending') {
       return (
-        <button className={styles.subscribeBtn} onClick={onSubscribe}>
+        <button className={styles.subscribeBtn}>
           <LoadingSpinner skin={LoadingSpinnerSkin} theme={spinnerStyles} />
         </button>
       );
@@ -63,11 +68,14 @@ export default class Subscribe extends Component<{}, State> {
       return (
         <div className={styles.errorMsg}>
           <span>Error Subscribing</span>
+          <button className={styles.refreshBtn} onClick={this.refreshSubmitBtn}>
+            <img src={refresh} className={styles.refreshIcon} alt="refresh" />
+          </button>
         </div>
       );
     } else if (status === 'success') {
       return (
-        <button className={classnames([styles.subscribeBtn, styles.success])} onClick={onSubscribe}>
+        <button className={classnames([styles.subscribeBtn, styles.success])}>
           <img src={success} className={styles.successIcon} alt="success checkmark" />
         </button>
       );

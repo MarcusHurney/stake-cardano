@@ -88,6 +88,26 @@
  font-size: 1em;
 }
 
+.refreshBtn {
+ background-color: transparent;
+ border: none;
+ &:hover {
+  cursor: pointer;
+  .refreshIcon {
+   transform: rotate(360deg);
+   transition: transform 2s ease-in-out;
+  }
+ }
+ &:focus {
+  outline: none;
+ }
+ .refreshIcon {
+  margin-top: 3px;
+  height: 25px;
+  width: 25px;
+ }
+}
+
 .successIcon {
  margin-top: 3px;
  height: 25px;

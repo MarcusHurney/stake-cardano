@@ -57,7 +57,6 @@ class LoadingSpinnerBase extends Component<Props, State> {
 
   render() {
     // destructuring props ensures only the "...rest" get passed down
-    console.log(this.props.theme);
     const {
       skin,
       theme,
