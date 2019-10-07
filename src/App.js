@@ -4,7 +4,7 @@ import { GridItem } from './components/Layout/GridItem';
 import { Gutter } from './components/Layout/Gutter';
 import { Banner } from './components/Banner/Banner';
 import { Logo } from './components/Logo/Logo';
-import { Navbar } from './components/Navbar/Navbar';
+// import { Navbar } from './components/Navbar/Navbar';
 import { Space } from './components/Space/Space';
 import Subscribe from './components/Subscribe/Subscribe';
 import appStyles from './App.module.scss';
@@ -23,8 +23,8 @@ class App extends Component {
 
     return (
       <div className={appStyles['app']}>
-        <Navbar />
-        <Gutter padding="5vh 10vw 0 10vw">
+        {/* <Navbar /> */}
+        <Gutter padding="5vh 10vw 5vh 10vw">
           <Grid
           theme={SimpleGrid}
           autoRows
