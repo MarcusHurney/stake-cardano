@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: stakecardano.io
+Token: 6bd05141e2c71369a5109f2f75d4af59ffd96a9c6c30cbdaaae956a81d07b620

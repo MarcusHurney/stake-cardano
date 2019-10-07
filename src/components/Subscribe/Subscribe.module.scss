@@ -6,6 +6,13 @@
  flex-direction: column;
  justify-content: flex-start;
  align-items: flex-start;
+
+ // Makes offset of inputs from labels equal
+ label:nth-child(2) {
+  input {
+   margin-left: 0.88em;
+  }
+ }
 }
 
 .label {
@@ -25,10 +32,15 @@
   width: 295px;
 
   &:focus {
-   transition: ease-in-out 0.3s linear;
    border: 1px solid #979fef;
    border-radius: 5px;
    outline: none;
+  }
+
+  &:hover {
+   transition: all 0.3s ease-in-out;
+   border: 1px solid #979fef;
+   border-radius: 5px;
   }
  }
 
@@ -48,11 +60,13 @@
  color: #979fef;
  border-radius: 5px;
  font-family: 'apercu-pro', sans-serif;
- font-weight: 400;
+ font-weight: 500;
  font-size: 1em;
+ transition: all 0.1s ease;
+ letter-spacing: 1px;
 
  &:hover {
-  transition: ease-in-out 0.9s linear;
+  transition: all 0.3s ease;
   color: #282c34;
   cursor: pointer;
   background-color: #979fef;
