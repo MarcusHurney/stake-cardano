@@ -204,6 +204,34 @@
   margin-top: 2em;
  }
 
+ .marcus {
+  img {
+   height: 250px;
+   width: 225px;
+  }
+ }
+
+ .philippe {
+  img {
+   height: 250px;
+   width: 225px;
+  }
+ }
+
+ .jeremy {
+  img {
+   height: 225px;
+   width: 240px;
+  }
+ }
+
+ .vaclav {
+  img {
+   height: 225px;
+   width: 225px;
+  }
+ }
+
  // MEDIA QUERY 600px FOR .container
  @media (max-width: 768px) {
   display: block !important;
