@@ -91,7 +91,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
+  
   &_title {
    h1 {
     font-size: 0.9em;
@@ -196,6 +196,12 @@
     border-right: 1px solid #fff;
    }
   }
+ }
+
+ .team {
+  border: 1px solid #fff;
+  box-shadow: 3px 3px 20px $color-primary;
+  margin-top: 2em;
  }
 
  // MEDIA QUERY 600px FOR .container

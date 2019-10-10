@@ -4,6 +4,7 @@ import { GridItem } from './components/Layout/GridItem';
 import { Gutter } from './components/Layout/Gutter';
 import { Banner } from './components/Banner/Banner';
 import { Logo } from './components/Logo/Logo';
+import { Member } from './components/Team/Member';
 // import { Navbar } from './components/Navbar/Navbar';
 import { Space } from './components/Space/Space';
 import Subscribe from './components/Subscribe/Subscribe';
@@ -18,7 +19,11 @@ class App extends Component {
       '. logo logo logo logo',
       '. banner banner mission .',
       '. banner banner mission .',
-      '. banner banner mission .'
+      '. banner banner mission .',
+      'philippe philippe philippe vaclav vaclav',
+      'philippe philippe philippe vaclav vaclav',
+      'jeremy jeremy marcus marcus marcus',
+      'jeremy jeremy marcus marcus marcus'
     ];
 
     return (
@@ -79,6 +84,22 @@ class App extends Component {
               <span></span>
               <span></span>
             </GridItem>
+
+            <GridItem className={customGrid['team']} gridArea="philippe">
+              <Member bio="All about these coins" name="Philippe" />
+            </GridItem>
+            <GridItem className={customGrid['team']} gridArea="marcus">
+              <Member bio="All about these alt coins" name="Marcus" />
+            </GridItem>
+            <GridItem className={customGrid['team']} gridArea="jeremy">
+              <Member bio="All about these alt coins" name="Jeremy" />
+            </GridItem>
+             <GridItem className={customGrid['team']} gridArea="vaclav">
+              <Member bio="All about these alt coins" name="Vaclav" />
+            </GridItem>
+            {/* <GridItem gridArea="team3">
+              <Member bio="All about these coins" name="Philippe" />
+            </GridItem> */}
           </Grid>
           <div className={appStyles['email_collection']}>
             <div className={appStyles['email_collection_wrapper']}>
