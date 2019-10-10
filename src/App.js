@@ -12,6 +12,10 @@ import appStyles from './App.module.scss';
 import logoStyles from './components/Logo/Logo.module.scss';
 import customGrid from './customGrid.module.scss';
 import SimpleGrid from './components/Layout/Grid.module.scss';
+import Phillippe from './assets/images/Phillippe.png';
+import Marcus from './assets/images/Marcus.png';
+import Jeremy from './assets/images/Jeremy.png';
+import Vaclav from './assets/images/Vaclav.png';
 
 class App extends Component {
   render() {
@@ -86,16 +90,16 @@ class App extends Component {
             </GridItem>
 
             <GridItem className={customGrid['team']} gridArea="philippe">
-              <Member bio="All about these coins" name="Philippe" />
+              <Member bio="All about these coins" name="Philippe" photo={Phillippe} />
             </GridItem>
             <GridItem className={customGrid['team']} gridArea="marcus">
-              <Member bio="All about these alt coins" name="Marcus" />
+              <Member bio="All about these alt coins" name="Marcus" photo={Marcus} />
             </GridItem>
             <GridItem className={customGrid['team']} gridArea="jeremy">
-              <Member bio="All about these alt coins" name="Jeremy" />
+              <Member bio="All about these alt coins" name="Jeremy" photo={Jeremy} />
             </GridItem>
              <GridItem className={customGrid['team']} gridArea="vaclav">
-              <Member bio="All about these alt coins" name="Vaclav" />
+              <Member bio="All about these alt coins" name="Vaclav" photo={Vaclav} />
             </GridItem>
             {/* <GridItem gridArea="team3">
               <Member bio="All about these coins" name="Philippe" />
