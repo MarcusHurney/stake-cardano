@@ -35,12 +35,12 @@ class App extends Component {
         {/* <Navbar /> */}
         <Gutter padding="5vh 10vw 5vh 10vw">
           <Grid
-          theme={SimpleGrid}
-          autoRows
-          columns={'repeat(5, 1fr)'}
-          templateAreas={templateAreas}
-          themeOverrides={customGrid}
-          gap={50}
+            theme={SimpleGrid}
+            autoRows
+            columns={'repeat(5, 1fr)'}
+            templateAreas={templateAreas}
+            themeOverrides={customGrid}
+            gap={50}
           >
             <GridItem
               className={customGrid['logo']}
@@ -97,6 +97,7 @@ class App extends Component {
                 photo={Philippe}
               />
             </GridItem>
+
             <GridItem className={customGrid['team']} gridArea="marcus">
               <Member
                 bio="All about these alt coins"
@@ -105,6 +106,7 @@ class App extends Component {
                 photo={Marcus}
               />
             </GridItem>
+
             <GridItem className={customGrid['team']} gridArea="jeremy">
               <Member
                 bio="All about these alt coins"
@@ -113,6 +115,7 @@ class App extends Component {
                 photo={Jeremy}
               />
             </GridItem>
+
              <GridItem className={customGrid['team']} gridArea="vaclav">
               <Member
                 bio="All about these alt coins"
@@ -121,16 +124,15 @@ class App extends Component {
                 photo={Vaclav}
               />
             </GridItem>
-            {/* <GridItem gridArea="team3">
-              <Member bio="All about these coins" name="Philippe" />
-            </GridItem> */}
           </Grid>
+
           <div className={appStyles['email_collection']}>
             <div className={appStyles['email_collection_wrapper']}>
               <h1>Stay</h1><h1>Notified</h1>
               <Subscribe />
             </div>
           </div>
+
         </Gutter>
       </div>
     );
