@@ -201,34 +201,46 @@
  .team {
   border: 1px solid #fff;
   box-shadow: 3px 3px 20px $color-primary;
-  margin-top: 2em;
- }
+  position: relative;
 
- .marcus {
-  img {
-   height: 250px;
-   width: 225px;
+  &.philippe {
+   img {
+    height: 250px;
+    width: 225px;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+   }
   }
- }
 
- .philippe {
-  img {
-   height: 250px;
-   width: 225px;
+  &.marcus {
+   img {
+    height: 250px;
+    width: 225px;
+    position: absolute;
+    bottom: -10px;
+    right: -15px;
+   }
   }
- }
 
- .jeremy {
-  img {
-   height: 225px;
-   width: 240px;
+  &.jeremy {
+   img {
+    height: 225px;
+    width: 245px;
+    position: absolute;
+    bottom: -13px;
+    right: -23px;
+   }
   }
- }
 
- .vaclav {
-  img {
-   height: 225px;
-   width: 240px;
+  &.vaclav {
+   img {
+    height: 225px;
+    width: 240px;
+    position: absolute;
+    bottom: -27px;
+    right: -15px;
+   }
   }
  }
 
@@ -301,6 +313,10 @@
      font-size: 0.7em;
     }
    }
+  }
+
+  .team {
+   margin-top: 2em;
   }
  }
 }

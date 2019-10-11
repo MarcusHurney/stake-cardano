@@ -14,7 +14,7 @@ export const Member = (props: Props) => {
  console.log(props);
  return (
   <div className={classnames([props.className, styles.component])}>
-   <h1>{props.name}</h1>
+   <span>{props.name}</span>
    <img src={props.photo} alt="teammate" />
   </div>
  );

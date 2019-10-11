@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cn from 'classnames';
 import { Grid } from './components/Layout/Grid';
 import { GridItem } from './components/Layout/GridItem';
 import { Gutter } from './components/Layout/Gutter';
@@ -19,15 +20,17 @@ import Vaclav from './assets/images/Vaclav.png';
 
 class App extends Component {
   render() {
-    const templateAreas = [
-      '. logo logo logo logo',
-      '. banner banner mission .',
-      '. banner banner mission .',
-      '. banner banner mission .',
-      'philippe philippe philippe vaclav vaclav',
-      'philippe philippe philippe vaclav vaclav',
-      'jeremy jeremy marcus marcus marcus',
-      'jeremy jeremy marcus marcus marcus'
+    const gridLayout = [
+      '. logo logo logo logo logo logo .',
+      '. banner banner banner banner mission mission .',
+      '. banner banner banner banner mission mission .',
+      '. banner banner banner banner mission mission .',
+      '. . philippe philippe philippe philippe . .',
+      '. . philippe philippe philippe philippe . .',
+      'jeremy jeremy jeremy jeremy vaclav vaclav vaclav vaclav',
+      'jeremy jeremy jeremy jeremy vaclav vaclav vaclav vaclav',
+      '. . marcus marcus marcus marcus . .',
+      '. . marcus marcus marcus marcus . .',
     ];
 
     return (
@@ -37,8 +40,8 @@ class App extends Component {
           <Grid
             theme={SimpleGrid}
             autoRows
-            columns={'repeat(5, 1fr)'}
-            templateAreas={templateAreas}
+            columns={'repeat(8, 1fr)'}
+            templateAreas={gridLayout}
             themeOverrides={customGrid}
             gap={50}
           >
@@ -89,37 +92,33 @@ class App extends Component {
               <span></span>
             </GridItem>
 
-            <GridItem className={customGrid['team']} gridArea="philippe">
+            <GridItem className={cn([customGrid['team'], customGrid['philippe']])} gridArea="philippe">
               <Member
-                className={customGrid['philippe']}
                 bio="All about these coins"
                 name="Philippe"
                 photo={Philippe}
               />
             </GridItem>
 
-            <GridItem className={customGrid['team']} gridArea="marcus">
+            <GridItem className={cn([customGrid['team'], customGrid['marcus']])} gridArea="marcus">
               <Member
                 bio="All about these alt coins"
-                className={customGrid['marcus']}
                 name="Marcus"
                 photo={Marcus}
               />
             </GridItem>
 
-            <GridItem className={customGrid['team']} gridArea="jeremy">
+            <GridItem className={cn([customGrid['team'], customGrid['jeremy']])} gridArea="jeremy">
               <Member
                 bio="All about these alt coins"
-                className={customGrid['jeremy']} 
                 name="Jeremy"
                 photo={Jeremy}
               />
             </GridItem>
 
-             <GridItem className={customGrid['team']} gridArea="vaclav">
+             <GridItem className={cn([customGrid['team'], customGrid['vaclav']])} gridArea="vaclav">
               <Member
                 bio="All about these alt coins"
-                className={customGrid['vaclav']}
                 name="Vaclav"
                 photo={Vaclav}
               />

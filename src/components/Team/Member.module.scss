@@ -2,8 +2,8 @@
 
 .component {
  display: flex;
- flex-direction: row;
+ flex-direction: column;
  justify-content: flex-start;
- align-items: center;
+ align-items: flex-start;
  height: 300px;
 }
