@@ -11,11 +11,14 @@ type Props = {
 };
 
 export const Member = (props: Props) => {
- console.log(props);
+ const { bio, className, name, photo } = props;
+
  return (
-  <div className={classnames([props.className, styles.component])}>
-   <span>{props.name}</span>
-   <img src={props.photo} alt="teammate" />
+  <div className={classnames([className, styles.component])}>
+   <span />
+   <span className={styles.name}>{name}</span>
+   <p className={styles.bio}>{bio}</p>
+   <img src={photo} alt="teammate" />
   </div>
  );
 };

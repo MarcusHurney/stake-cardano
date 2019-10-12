@@ -17,6 +17,7 @@ import Philippe from './assets/images/Philippe.png';
 import Marcus from './assets/images/Marcus.png';
 import Jeremy from './assets/images/Jeremy.png';
 import Vaclav from './assets/images/Vaclav.png';
+import { teamBios } from './components/Team/bios';
 
 class App extends Component {
   render() {
@@ -32,6 +33,8 @@ class App extends Component {
       '. . marcus marcus marcus marcus . .',
       '. . marcus marcus marcus marcus . .',
     ];
+
+    const { philippeBio, marcusBio, jeremyBio, vaclavBio } = teamBios;
 
     return (
       <div className={appStyles['app']}>
@@ -94,32 +97,32 @@ class App extends Component {
 
             <GridItem className={cn([customGrid['team'], customGrid['philippe']])} gridArea="philippe">
               <Member
-                bio="All about these coins"
-                name="Philippe"
+                bio={philippeBio}
+                name="Philippe Pierre-Antoine"
                 photo={Philippe}
               />
             </GridItem>
 
             <GridItem className={cn([customGrid['team'], customGrid['marcus']])} gridArea="marcus">
               <Member
-                bio="All about these alt coins"
-                name="Marcus"
+                bio={marcusBio}
+                name="Marcus Hurney"
                 photo={Marcus}
               />
             </GridItem>
 
             <GridItem className={cn([customGrid['team'], customGrid['jeremy']])} gridArea="jeremy">
               <Member
-                bio="All about these alt coins"
-                name="Jeremy"
+                bio={jeremyBio}
+                name="Jeremy Quinn"
                 photo={Jeremy}
               />
             </GridItem>
 
              <GridItem className={cn([customGrid['team'], customGrid['vaclav']])} gridArea="vaclav">
               <Member
-                bio="All about these alt coins"
-                name="Vaclav"
+                bio={vaclavBio}
+                name="Václav Navrátil"
                 photo={Vaclav}
               />
             </GridItem>
