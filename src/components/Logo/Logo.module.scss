@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables';
+
 .logo_container {
   position: relative;
   z-index: 2;
@@ -6,40 +8,10 @@
   justify-content: flex-start;
   align-items: center;
   padding: 1vmax;
-  border: 2px solid #979fef;
+  border: 2px solid $color-primary;
   font-family: 'Altero-Regular';
   width: 40vw;
   height: 1.5vh;
-
-  @media screen and (max-width: 1200px) {
-    width: 45vw;
-    height: 2vh;
-  }
-  @media screen and (max-width: 1000px) {
-    margin-bottom: 2em;
-    width: 50vw;
-    height: 2vh;
-  }
-  @media screen and (max-width: 768px) {
-    margin-bottom: 2em;
-    width: 65vw;
-  }
-  @media screen and (max-width: 685px) {
-    margin-bottom: 2em;
-    width: 65vw;
-    height: 2vh;
-    .cardano_logo {
-      height: calc(55px + 2vmin) !important;
-      width: calc(55px + 2vmin) !important;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    width: 80vw;
-    .cardano_logo {
-      height: calc(50px + 2vmin) !important;
-      width: calc(50px + 2vmin) !important;
-    }
-  }
 
   div {
     padding: 0;
@@ -47,7 +19,7 @@
   }
 
   .stake_text {
-    color: #979fef;
+    color: $color-primary;
     letter-spacing: 3px;
     z-index: 2;
   }
@@ -61,12 +33,14 @@
 
   .cardano_logo_container {
     position: relative;
+
     span {
       position: relative;
       color: #fff;
       text-transform: uppercase;
       z-index: 3;
     }
+
     .cardano_logo {
       position: absolute;
       background-image: url('../../assets/svg/cardano-logo.svg');
@@ -78,5 +52,49 @@
       bottom: -85%;
       left: -165%;
     }
+  }
+}
+
+// Media Queries //////////////////////////////////////////////////////////////////////
+
+.logo_container {
+  @media screen and (max-width: 500px) {
+    width: 80vw !important;
+
+    .cardano_logo_container {
+      .cardano_logo {
+        height: calc(50px + 2vmin);
+        width: calc(50px + 2vmin);
+      }
+    }
+  }
+
+  @media screen and (max-width: 685px) {
+    height: 2vh;
+    margin-bottom: 2em;
+    width: 65vw !important;
+
+    .cardano_logo_container {
+      .cardano_logo {
+        height: calc(55px + 2vmin);
+        width: calc(55px + 2vmin);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2em;
+    width: 65vw;
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 2em;
+    width: 50vw;
+    height: 2vh;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 45vw;
+    height: 2vh;
   }
 }
