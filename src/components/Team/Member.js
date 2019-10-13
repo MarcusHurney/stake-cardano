@@ -12,9 +12,8 @@ type Props = {
 
 export const Member = (props: Props) => {
  const { bio, className, name, photo } = props;
-
  return (
-  <div className={classnames([className, styles.component])}>
+  <div className={classnames([styles.component, styles[className]])}>
    <span />
    <span className={styles.name}>{name}</span>
    <p className={styles.bio}>{bio}</p>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import cn from 'classnames';
 import { Grid } from './components/Layout/Grid';
 import { GridItem } from './components/Layout/GridItem';
 import { Gutter } from './components/Layout/Gutter';
@@ -95,32 +94,36 @@ class App extends Component {
               <span></span>
             </GridItem>
 
-            <GridItem className={cn([customGrid['team'], customGrid['philippe']])} gridArea="philippe">
+            <GridItem className={customGrid['team']} gridArea="philippe">
               <Member
+                className="philippe"
                 bio={philippeBio}
                 name="Philippe Pierre-Antoine"
                 photo={Philippe}
               />
             </GridItem>
 
-            <GridItem className={cn([customGrid['team'], customGrid['marcus']])} gridArea="marcus">
+            <GridItem className={customGrid['team']} gridArea="marcus">
               <Member
+                className="marcus"
                 bio={marcusBio}
                 name="Marcus Hurney"
                 photo={Marcus}
               />
             </GridItem>
 
-            <GridItem className={cn([customGrid['team'], customGrid['jeremy']])} gridArea="jeremy">
+            <GridItem className={customGrid['team']} gridArea="jeremy">
               <Member
+                className="jeremy"
                 bio={jeremyBio}
                 name="Jeremy Quinn"
                 photo={Jeremy}
               />
             </GridItem>
 
-             <GridItem className={cn([customGrid['team'], customGrid['vaclav']])} gridArea="vaclav">
+             <GridItem className={customGrid['team']} gridArea="vaclav">
               <Member
+                className="vaclav"
                 bio={vaclavBio}
                 name="Václav Navrátil"
                 photo={Vaclav}
