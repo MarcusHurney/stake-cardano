@@ -5,7 +5,7 @@ import { Gutter } from './components/Layout/Gutter';
 import { Banner } from './components/Banner/Banner';
 import { Logo } from './components/Logo/Logo';
 import { Member } from './components/Team/Member';
-// import { Navbar } from './components/Navbar/Navbar';
+import { Navbar } from './components/Navbar/Navbar';
 import { Space } from './components/Space/Space';
 import Subscribe from './components/Subscribe/Subscribe';
 import appStyles from './App.module.scss';
@@ -37,7 +37,7 @@ class App extends Component {
 
     return (
       <div className={appStyles['app']}>
-        {/* <Navbar /> */}
+        <Navbar />
         <Gutter padding="5vh 10vw 5vh 10vw">
           <Grid
             theme={SimpleGrid}

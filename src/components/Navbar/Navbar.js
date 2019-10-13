@@ -9,7 +9,7 @@ export const Navbar = () => {
    const [navbarIsVisible, handleScroll] = useState(false);
 
   const toggleVisibility = (): void => {
-    const visible: boolean = window.scrollY >= window.innerHeight ? true : false;
+    const visible: boolean = window.scrollY >= window.innerHeight - 350 ? true : false;
     handleScroll(visible);
   };
 
