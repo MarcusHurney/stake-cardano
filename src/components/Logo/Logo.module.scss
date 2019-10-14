@@ -58,15 +58,20 @@
 // Media Queries //////////////////////////////////////////////////////////////////////
 
 .logo_container {
-  @media screen and (max-width: 500px) {
-    width: 80vw !important;
+  @media screen and (max-width: 1200px) {
+    width: 45vw;
+    height: 2vh;
+  }
 
-    .cardano_logo_container {
-      .cardano_logo {
-        height: calc(50px + 2vmin);
-        width: calc(50px + 2vmin);
-      }
-    }
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 2em;
+    width: 50vw;
+    height: 2vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2em;
+    width: 65vw;
   }
 
   @media screen and (max-width: 685px) {
@@ -82,19 +87,14 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
-    margin-bottom: 2em;
-    width: 65vw;
-  }
+  @media screen and (max-width: 500px) {
+    width: 80vw !important;
 
-  @media screen and (max-width: 1000px) {
-    margin-bottom: 2em;
-    width: 50vw;
-    height: 2vh;
-  }
-
-  @media screen and (max-width: 1200px) {
-    width: 45vw;
-    height: 2vh;
+    .cardano_logo_container {
+      .cardano_logo {
+        height: calc(50px + 2vmin);
+        width: calc(50px + 2vmin);
+      }
+    }
   }
 }

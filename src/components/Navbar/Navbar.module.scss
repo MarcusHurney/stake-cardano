@@ -27,15 +27,15 @@
 // Media Queries //////////////////////////////////////////////////////////////////////////////
 
 .navbar {
+  @media screen and (max-width: 960px) {
+    padding-left: 4rem;
+  }
+
   @media screen and (max-width: 500px) {
     padding-left: 1rem;
   }
 
   @media screen and (max-width: 685px) {
     padding-left: 2rem;
-  }
-
-  @media screen and (max-width: 960px) {
-    padding-left: 4rem;
   }
 }

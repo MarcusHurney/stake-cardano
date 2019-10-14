@@ -40,7 +40,7 @@
    height: 250px;
    width: 225px;
    position: absolute;
-   bottom: -10px;
+   bottom: -11px;
    left: 0px;
   }
  }
@@ -62,7 +62,7 @@
    height: 255px;
    width: 225px;
    position: absolute;
-   bottom: -10px;
+   bottom: -11px;
    right: -15px;
   }
  }
@@ -106,7 +106,7 @@
    height: 220px;
    width: 240px;
    position: absolute;
-   bottom: -27px;
+   bottom: -28px;
    right: -15px;
   }
  }
@@ -119,15 +119,23 @@
   height: 325px;
  }
 
- @media screen and (max-width: 770px) {
-  height: 375px;
+ @media screen and (max-width: 768px) {
+  height: 385px;
  }
 
  @media screen and (max-width: 600px) {
   height: 400px;
  }
 
+ @media screen and (max-width: 360px) {
+  height: 425px;
+ }
+
  &.philippe {
+  @media screen and (max-width: 320px) {
+   height: 525px;
+  }
+
   p {
    @media screen and (max-width: 1250px) {
     margin-top: 2em;
@@ -168,6 +176,10 @@
  }
 
  &.marcus {
+  @media screen and (max-width: 320px) {
+   height: 525px;
+  }
+
   img {
    @media screen and (max-width: 1340px) {
     height: 200px;
@@ -189,12 +201,16 @@
  }
 
  &.jeremy {
-  @media screen and (max-width: 1250px) {
-   height: 335px;
+  @media screen and (max-width: 450px) {
+   height: 480px;
   }
 
-  @media screen and (max-width: 1250px) {
-   height: 480px;
+  @media screen and (max-width: 360px) {
+   height: 510px;
+  }
+
+  @media screen and (max-width: 320px) {
+   height: 587px;
   }
 
   img {
@@ -209,9 +225,9 @@
    }
 
    @media screen and (max-width: 600px) {
-    height: 110px;
-    width: 145px;
-    bottom: -6px;
+    height: 130px;
+    width: 165px;
+    bottom: -8px;
     right: -13px;
    }
   }
@@ -220,6 +236,14 @@
  &.vaclav {
   @media screen and (max-width: 600px) {
    height: 455px;
+  }
+
+  @media screen and (max-width: 360px) {
+   height: 470px;
+  }
+
+  @media screen and (max-width: 320px) {
+   height: 572px;
   }
 
   img {
@@ -234,9 +258,9 @@
    }
 
    @media screen and (max-width: 600px) {
-    height: 125px;
-    width: 145px;
-    bottom: -15px;
+    height: 135px;
+    width: 155px;
+    bottom: -17px;
     right: -9px;
    }
   }
@@ -264,8 +288,10 @@
    margin-top: 3em;
   }
 
-  @media screen and (max-width: 770px) {
+  // ipad
+  @media screen and (max-width: 768px) {
    margin-top: 2em;
+   font-size: 0.7em;
   }
 
   @media screen and (max-width: 600px) {
