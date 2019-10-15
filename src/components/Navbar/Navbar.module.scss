@@ -22,6 +22,39 @@
   width: 100vw;
   border-bottom: 2px solid $color-primary;
   @include slickAnimation(0.5s);
+
+  .subscribeBtnWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 75vw;
+
+    .subscribeBtn {
+      min-width: 200px;
+      min-height: 30px;
+      background-color: transparent;
+      border: 1px solid $color-secondary;
+      color: $color-secondary;
+      border-radius: 5px;
+      font-family: 'apercu-pro', sans-serif;
+      font-weight: 500;
+      font-size: 1em;
+      transition: all 0.1s ease;
+      letter-spacing: 1px;
+ 
+      &:hover {
+      transition: all 0.3s ease;
+      color: rgba(40, 44, 52, 0.9);
+      cursor: pointer;
+      background-color: $color-secondary;
+      }
+    
+      &:focus {
+      outline: none;
+      }
+    }
+  }
 }
 
 // Media Queries //////////////////////////////////////////////////////////////////////////////
@@ -37,5 +70,26 @@
 
   @media screen and (max-width: 685px) {
     padding-left: 2rem;
+  }
+
+  .subscribeBtnWrapper {
+    .subscribeBtn {
+      @media screen and (max-width: 1023px) {
+        margin-right: 3em;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-right: 4em;
+      }
+
+      @media screen and (max-width: 500px) {
+        margin-right: 3.3em;
+        min-width: 150px;
+      }
+
+      @media screen and (max-width: 350px) {
+        min-width: 125px;
+      }
+    }
   }
 }

@@ -89,10 +89,10 @@ export default class Subscribe extends Component<{}, State> {
         render={({ subscribe, status, message }) => {
           const onSubscribe = this.onSubmit.bind(null, subscribe);
           return (
-            <div className={styles.component}>
+            <div id="subscribeForm" className={styles.component}>
               <label className={styles.label}>
                 Name:
-                <input type="text" value={this.state.NAME} onChange={this.onNameChange} />
+                <input id="nameInput" type="text" value={this.state.NAME} onChange={this.onNameChange} />
               </label>
               <label className={styles.label}>
                 Email:
