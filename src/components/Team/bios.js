@@ -7,7 +7,7 @@ export const teamBios = {
  `,
  marcusBio: `
   Marcus graduated from The University of Georgia with a B.A. in Comparative Literature.
-  He is currently a frontend develop working on Daedalus at IOHK and maintains the open source library react-polymorph.
+  He is currently a frontend developer working on Daedalus at IOHK and helps maintain the open source library react-polymorph.
   Marcus has five years of experience building scalable and performant web applications for early stage and midsize startups.
  `,
  jeremyBio: `
