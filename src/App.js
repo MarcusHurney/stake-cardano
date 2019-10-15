@@ -96,8 +96,9 @@ class App extends Component {
 
             <GridItem className={customGrid['team']} gridArea="philippe">
               <Member
-                className="philippe"
                 bio={philippeBio}
+                className="philippe"
+                linkedinURL="https://www.linkedin.com/in/philippe-pierre-antoine-87103453/"
                 name="Philippe Pierre-Antoine"
                 photo={Philippe}
               />
@@ -105,8 +106,9 @@ class App extends Component {
 
             <GridItem className={customGrid['team']} gridArea="marcus">
               <Member
-                className="marcus"
                 bio={marcusBio}
+                className="marcus"
+                linkedinURL="https://www.linkedin.com/in/marcus-hurney/"
                 name="Marcus Hurney"
                 photo={Marcus}
               />
@@ -114,8 +116,9 @@ class App extends Component {
 
             <GridItem className={customGrid['team']} gridArea="jeremy">
               <Member
-                className="jeremy"
                 bio={jeremyBio}
+                className="jeremy"
+                linkedinURL="https://www.linkedin.com/in/jeremycquinn/"
                 name="Jeremy Quinn"
                 photo={Jeremy}
               />
@@ -123,8 +126,9 @@ class App extends Component {
 
              <GridItem className={customGrid['team']} gridArea="vaclav">
               <Member
-                className="vaclav"
                 bio={vaclavBio}
+                className="vaclav"
+                linkedinURL="https://www.linkedin.com/in/v%C3%A1clav-navr%C3%A1til-67ba091a/"
                 name="Václav Navrátil"
                 photo={Vaclav}
               />

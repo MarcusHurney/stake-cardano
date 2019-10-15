@@ -6361,6 +6361,11 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-web@^5.5.7:
+  version "5.5.9"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.5.9.tgz#f8775e8c36dfada428f9acea826ab674750419a8"
+  integrity sha512-3Zdxnuyi6WXnMj+0ZfwDd17EXCM87Hcbhd+sVFq6EPGfkVoGzoIkZt9OafcgXw4mzjyILOkPDLaBumrgGKoCaw==
+
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
@@ -8710,6 +8715,13 @@ react-scripts@2.1.5:
     workbox-webpack-plugin "3.6.3"
   optionalDependencies:
     fsevents "1.2.4"
+
+react-useanimations@^1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/react-useanimations/-/react-useanimations-1.2.10.tgz#af28c4050c927b40df510e7cdd30c4fa5eeaa683"
+  integrity sha512-Xqc60UhI2WjC+PNkuOOFYnLszLFB3/36tEeaxWkxg5ILgY9FGeDahyKxTu+9YqdLfUzF8pqo7KbjFkHoPUW7XQ==
+  dependencies:
+    lottie-web "^5.5.7"
 
 react@^16.8.2:
   version "16.9.0"

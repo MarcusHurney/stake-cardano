@@ -5,7 +5,7 @@
  flex-direction: column;
  justify-content: flex-start;
  align-items: flex-start;
- height: 300px;
+ height: 330px;
 
  .bio {
   font-size: 0.7em;
@@ -14,9 +14,43 @@
   padding-left: 0.5em;
  }
 
- .name {
-  padding-left: 0.3em;
+ .toprow_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .name {
+   font-size: 0.9em;
+   margin: 0;
+   padding-left: 0.3em;
+  }
+
+  .social_icon {
+   &:hover {
+    cursor: pointer;
+
+    svg {
+     path {
+      stroke: $color-secondary;
+     }
+    }
+   }
+
+   svg {
+    path {
+     stroke: $color-primary;
+     transition: all 0.3s ease-in-out;
+    }
+   }
+
+   // &.github_icon {
+    
+   // }
+  }
  }
+ 
 
  &.philippe {
   span {
@@ -33,7 +67,7 @@
 
   p {
    align-self: flex-end;
-   margin-top: 3em;
+   margin-top: 2em;
   }
  
   img {
@@ -119,6 +153,10 @@
   height: 325px;
  }
 
+ @media screen and (max-width: 1024px) {
+  height: 368px;
+ }
+
  @media screen and (max-width: 768px) {
   height: 385px;
  }
@@ -127,8 +165,8 @@
   height: 400px;
  }
 
- @media screen and (max-width: 360px) {
-  height: 425px;
+ @media screen and (max-width: 375px) {
+  height: 465px;
  }
 
  &.philippe {
@@ -146,7 +184,7 @@
    }
 
    @media screen and (max-width: 600px) {
-    margin-top: 1em;
+    margin-top: 2em;
    }
   }
 
@@ -205,7 +243,7 @@
    height: 480px;
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 375px) {
    height: 510px;
   }
 
@@ -238,8 +276,8 @@
    height: 455px;
   }
 
-  @media screen and (max-width: 360px) {
-   height: 470px;
+  @media screen and (max-width: 375px) {
+   height: 485px;
   }
 
   @media screen and (max-width: 320px) {
@@ -278,40 +316,57 @@
   }
 
   @media screen and (max-width: 1250px) {
-   margin-top: 0.4em;
+   margin-top: 0.4em !important;
    line-height: 1.4rem;
   }
 
   @media screen and (max-width: 1000px) {
    font-size: 0.7em;
    line-height: 1.7rem;
-   margin-top: 3em;
+   margin-top: 1em;
   }
 
   // ipad
   @media screen and (max-width: 768px) {
-   margin-top: 2em;
-   font-size: 0.7em;
+   margin-top: 0.3em;
+   font-size: 0.8em;
   }
 
   @media screen and (max-width: 600px) {
    margin-top: 1em;
+   font-size: 0.7em;
+   line-height: 1.5rem;
+  }
+
+  @media screen and (max-width: 500px) {
    font-size: 0.6em;
    line-height: 1.4rem;
   }
+
+  @media screen and (max-width: 320px) {
+   line-height: 1.3rem;
+  }
  }
-
- .name {
-  @media screen and (max-width: 1250px) {
-   font-size: 0.8em;
+ .toprow_wrapper {
+  .name {
+   @media screen and (max-width: 1250px) {
+    font-size: 0.8em;
+   }
+ 
+   @media screen and (max-width: 1000px) {
+    font-size: 100%;
+   }
+ 
+   @media screen and (max-width: 600px) {
+    font-size: 0.8em;
+   }
   }
 
-  @media screen and (max-width: 1000px) {
-   font-size: 100%;
-  }
-
-  @media screen and (max-width: 600px) {
-   font-size: 0.8em;
+  .social_icon {
+   @media screen and (max-width: 600px) {
+    height: 40px;
+    width: 40px;
+   }
   }
  }
 }
